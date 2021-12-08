@@ -7,4 +7,7 @@ import moxy.viewstate.strategy.StateStrategyType
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface MoviesView : MvpView {
     fun init()
+    fun updateList()
+    fun showError(error: Throwable)
+    fun showEny(bla: String)
 }
