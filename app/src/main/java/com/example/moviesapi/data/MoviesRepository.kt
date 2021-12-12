@@ -1,10 +1,10 @@
 package com.example.moviesapi.data
 
-import com.example.moviesapi.api.MoviesApi
-import com.example.moviesapi.api.MoviesApiFactory
+import com.example.moviesapi.data.movie.Movie
+import com.example.moviesapi.data.moviesTrending.MoviesTrendingList
 import io.reactivex.rxjava3.core.Single
 
-class MoviesRepository(private val repositoriesMovies: MoviesApi = MoviesApiFactory.create()) {
-    fun getMovies(): Single<MoviesTrendingList> =
-        repositoriesMovies.fetchMoviesTrending()
+interface MoviesRepository {
+    fun getMovies(): Single<MoviesTrendingList>
+    fun getMovie(id: Int): Single<Movie>
 }

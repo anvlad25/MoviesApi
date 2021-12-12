@@ -1,9 +1,9 @@
-package com.example.moviesapi.data
+package com.example.moviesapi.data.moviesTrending
 
 import com.google.gson.annotations.SerializedName
 
 
-class MoviesTrendingList (
+class MoviesTrendingList(
     @SerializedName("results")
     val results: List<Movies>
 )

@@ -4,10 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.example.moviesapi.App
 import com.example.moviesapi.databinding.MoviesItemBinding
-
 
 class MoviesAdapter(private val presenter: IMovieListPresenter) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
@@ -29,6 +27,8 @@ class MoviesAdapter(private val presenter: IMovieListPresenter) :
         presenter.bindView(holder.apply { pos = position })
     }
 
+
+
     inner class ViewHolder(private val viewBinding: MoviesItemBinding) :
         RecyclerView.ViewHolder(viewBinding.root),
         MoviesItemView {
@@ -39,6 +39,7 @@ class MoviesAdapter(private val presenter: IMovieListPresenter) :
                 movieText.text = text
                 Glide.with(App.instance)
                     .load("https://image.tmdb.org/t/p/w500$poster")
+                    .override(800)
                     .into(movieImage)
             }
         }

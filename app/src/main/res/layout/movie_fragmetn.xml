@@ -6,26 +6,25 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/movieImage"
+        android:id="@+id/imageMovie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:src="@drawable/ic_launcher_background"
-        app:layout_constraintBottom_toTopOf="@+id/movieText"
+        app:layout_constraintBottom_toTopOf="@+id/textMovie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/movieText"
+        android:id="@+id/textMovie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movieImage"
+        app:layout_constraintTop_toBottomOf="@+id/imageMovie"
         tool:text="Фильм" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
